@@ -1,0 +1,36 @@
+header {
+    background-color: black;
+}
+
+header a {
+    color: rgb(244, 237, 237)
+}
+
+body {
+    background-color: rgb(244, 237, 237);
+}
+
+h1 {
+    color: rgb(98, 168, 124);
+    font-family: Courier, monospace
+}
+
+h2 {
+    color:rgb(183, 93, 105);
+}
+
+h3 {
+    color: rgb(136, 57, 68);
+}
+
+h4 {
+    color: rgb(60, 26, 63)
+}
+
+p {
+    color:rgb(16, 17, 27);
+}
+
+a {
+    color: rgb(70, 77, 119);
+}
