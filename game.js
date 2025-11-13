@@ -75,7 +75,7 @@ function outside() {
     if (check_stuff('car_here')) {
     console.log("In front of you in the parking lot is a car with someone in it.");
     }
-    const choiceRaw = safePrompt("Where do you want to go?");
+    const choiceRaw = window.prompt("Where do you want to go?");
     const choice = choiceRaw.toLowerCase();
 
     if (choice.includes("car") || choice.includes("front") || choice.includes("parking")) {
@@ -114,7 +114,7 @@ function pats() {
     outside();
     return;
     }
-    const choiceRaw = safePrompt("It wants more pats. Will you give more pats?");
+    const choiceRaw = window.prompt("It wants more pats. Will you give more pats?");
     const choice = choiceRaw.toLowerCase();
     if (choice === "yes" || choice.includes("pat")) {
     console.log("You pat the dog. Cute.");
@@ -136,7 +136,7 @@ function car() {
     if (!check_stuff('car_name')) {
     console.log("The car seems to be old, at least from the 80's, it's pretty run down and not in the best shape.");
     console.log("As you walk closer, you notice someone sitting in the driver's seat, they might know something.");
-    const choiceRaw = safePrompt("Do you leave or talk to them?");
+    const choiceRaw = window.prompt("Do you leave or talk to them?");
     const choice = choiceRaw.toLowerCase();
     if (choice.includes("talk")) {
         console.log("You tap on their car window");
@@ -161,7 +161,7 @@ function car() {
 
 function woods() {
     console.log("You tell him who you are and what you're doing, he seems eager to help and claims to know something that might help you solve your case.");
-    const choiceRaw = safePrompt("Do you go with him?");
+    const choiceRaw = window.prompt("Do you go with him?");
     const choice = choiceRaw.toLowerCase().trim();
     if (choice === "yes") {
     console.log("You get in his car and drive until you're on a secluded gravelled road surrounded by trees. He stops the car and gets out and you follow them.");
@@ -209,7 +209,7 @@ function woodsbad() {
     console.log("'You know you shouldn't be looking into things like this, stay out of things that you don't know anything about,' he turns around to look at you, it almost seems like he's growling.");
     console.log("It seems like he has unusually sharp nails (and a tail...?), before you realize what's happening, he transforms into a wolf-like creature.");
     console.log("He charges at you, do you defend yourself or flee?");
-    const choiceRaw = safePrompt("");
+    const choiceRaw = window.prompt("");
     const choice = choiceRaw.toLowerCase();
     if (choice.includes("flee")) {
     console.log("You run away as fast as you can, he doesn't run after you, it appears he's injured. You make it back to the main road, you see the sign to the hotel and decide that's probably the best place to go.");
@@ -242,7 +242,7 @@ function hotel_lobby() {
     if (check_invent('key')) {
     console.log("Down the hall is the room.");
     }
-    const choiceRaw = safePrompt("Where do you go?");
+    const choiceRaw = window.prompt("Where do you go?");
     const choice = choiceRaw.toLowerCase();
     if (choice.includes("hall") || choice.includes("room")) {
     if (!check_invent('key')) {
@@ -288,7 +288,7 @@ function telephone() {
     } else {
     const uniques = [...new Set(list_sus)];
     console.log("the people you have suspect are " + uniques.join(", "));
-    const guiltyRaw = safePrompt("You call the police, who do you arrest, if anyone?");
+    const guiltyRaw = window.prompt("You call the police, who do you arrest, if anyone?");
     const guilty = guiltyRaw.toLowerCase().trim();
     if (!list_sus.includes(guilty)) {
         console.log("Sorry, but you don't know that person. You go back to the lobby.");
@@ -332,11 +332,11 @@ function bar() {
         console.log("You notice that part of her grey jacket is ripped off.");
         if (!list_sus.includes('bartender')) list_sus.push('bartender');
     }
-    const choiceRaw = safePrompt("");
+    const choiceRaw = window.prompt("");
     const choice = choiceRaw.toLowerCase();
     if (choice.includes("order") || choice.includes("drink")) {
         console.log("'What drink do you want?' She asks.");
-        const drink = safePrompt("");
+        const drink = window.prompt("");
         console.log(`She sets down your ${drink} and you pay her for it.`);
         if (!bartender) {
         bargood();
@@ -372,7 +372,7 @@ function bar() {
 function bargood() {
     console.log("While drinking, one of the other customers moves from the other end of the bar to sit on the stool next to you.");
     console.log("'Haven't seen you around here before,' he observes, 'What are you doing here stranger?'");
-    const choiceRaw = safePrompt("Do you talk to them?");
+    const choiceRaw = window.prompt("Do you talk to them?");
     const choice = choiceRaw.toLowerCase().trim();
     if (choice === 'no') {
     introvert_check();
@@ -411,7 +411,7 @@ function barbad() {
     console.log("As you drink, you start to feel a bit dizzy and ask the bartender if you can sit down somewhere else, she tells you can rest in the back and she goes with you to make sure you're okay.");
     console.log("Once in the backroom, she sits you down on a crate.");
     console.log("She locks the door and goes back over to you, pulling out a knife. Do you fight back or flee?");
-    const choiceRaw = safePrompt("");
+    const choiceRaw = window.prompt("");
     const choice = choiceRaw.toLowerCase();
     if (choice.includes("flee")) {
     ending = 'Bartender Ending';
@@ -436,7 +436,7 @@ function front_desk() {
     console.log("'Hotel clerk' added to list of suspects.");
     if (!list_sus.includes('hotel clerk')) list_sus.push('hotel clerk');
     }
-    const choiceRaw = safePrompt("What do you do?");
+    const choiceRaw = window.prompt("What do you do?");
     const choice = choiceRaw.toLowerCase();
     if (choice.includes("key")) {
     if (!check_invent('key')) {
@@ -502,7 +502,7 @@ function room() {
     }
     }
 
-    const choiceRaw = safePrompt("Now that you've examined the room, would you like to go back to the lobby? (yes/no)");
+    const choiceRaw = window.prompt("Now that you've examined the room, would you like to go back to the lobby? (yes/no)");
     const choice = choiceRaw.toLowerCase();
     if (choice === 'yes') {
     console.log("You go back to the lobby, to investigate more.");
@@ -523,7 +523,7 @@ function room_bad() {
     console.log("The hotel clerk turns to you, 'almost no trace of the murder, right?' she tells you, 'it was difficult planning it, that's for sure.'");
     console.log("'It doesn't matter if you run or try to fight me, I'll kill you either way.' She smiles at you.");
     console.log("Do you try to run or attempt to defend yourself?");
-    const choiceRaw = safePrompt("");
+    const choiceRaw = window.prompt("");
     const choice = choiceRaw.toLowerCase();
     const escape = Math.floor(Math.random() * 2) + 1;
     if (choice === 'run') {
