@@ -1,4 +1,5 @@
 header {
+    width: 100vw;
     background-color: black;
 }
 
@@ -44,23 +45,30 @@ p {
 
 a {
     color: rgb(70, 77, 119);
+    text-decoration: underline;
 }
 
-#container {
-  position: relative;
-  width: 100vw;
-  height: 60%;
-  border: 3px solid #333;
-  background: white;
-  overflow: hidden;
+#network {
+    margin: auto;
+    position: relative;
+    width: 100vw;
+    height: auto;
 }
 
-.draggable {
-  position: absolute;
-  cursor: grab;
-  user-select: none;
+#network_graph {
+    border: 1px solid rgb(190, 190, 190);
+    position: relative;
+    width: 80%;
+    height: auto;
+    z-index: 1;
 }
 
-.draggable:active {
-  cursor: grabbing;
+#network_legend {
+    border: 1px solid rgb(190, 190, 190);
+    position: absolute;
+    height: 40%;
+    z-index: 2;
+    float: right;
+    top: -25px;
+    right: 30px;
 }

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
+
+
     <header>
         <table style="width: 100%;">
             <tr>
@@ -18,7 +22,7 @@
                 <td>
                     <h1>POSSUMGOD</h1>
                 </td>
-                <nav>
+                <nav id="main_nav">
                 <td>
                     <a href="/index.html">HOME</a>
                 </td>
@@ -35,41 +39,56 @@
             </tr>
         </table>
     </header>
+
+
     <body>
         <script src="" async defer></script>
         <h1>Professional Information</h1>
-        <h2>Projects</h2>
+        <nav id="prof_nav">
+            <ul>
+                <li><a href="#projects" class="active">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+        <h2 id="projects">Projects</h2>
+
         <h3>Music Retrival System</h3>
         <p>
             Originally built for my Computational Music Theory class final project, the following is a retrieval system using similar techniques 
             to TF-IDF in Information Retrieval to return closely related music pieces in a collection given a query file. The project relies on
             the PrettyMIDI library to dissect and compare information stored in the files.
-            <br>> See here for my paper submission for the MCM
+            <br>> See here for my paper submission for the MCM (draft)
             <br>> See here for the github project
         </p> 
+
         <h3>ASA Datafest Presentation on Coworking Spaces</h3>
         <p>
             The American Statistical Association's Datafest is a 3-day data analysis competition for undergraduate students to showcase their technical & 
             soft skills. In 2025, <a href="https://www.rit.edu/science/datafest">one of the events was held at RIT</a>, my university; my team,
-            <i>The Horrors, LLC</i>, got 3rd in the "Best Insights" category (despite being our first year participating!).
+            <i>The Horrors, LLC</i>, got 3rd in the "Best Insights" category (despite being our first year participating!). Each group gave a presentation to
+            a panel of judges and peers on our findings, we used <em>Python</em>, <em>R</em>, and <em>Excel</em> to support our hypothesis.
         </p>
         <p>
             The dataset was comprised of leasing and property information for a leasing company focused in the corporate leasing sector. Out of the various
             industries in the dataset, we decided to focus on determining trends in successful Coworking companies, creating a model for the properties they 
             leased that are factors of their success. [change phrasing here]
-            <br>> See here for the paper we submitted (draft)
+            <br><a href="Files/N5_The_Horrors_LLC.pdf" download>>Paper download (draft)</a>
         </p>
+
         <h3>LinkedIn Network Visualization</h3>
-        <p>
+        <p style="padding-bottom: 25px;">
             Using term frequency and bag-of-words methods, the program creates a visualization of a user's LinkedIn connections. Using exported data from
             LinkedIn, a network graph is generated using the Networkx and Matplot libraries. With node colors based on search terms and/or frequency of terms 
             from the root user's headline, it creates a simple visualization of a user's connections. The distances of each node from the root user also 
             correspond to the duration of that connection. Additionally, each node is hyperlinked to that user's profile, making it easier to migrate this 
             information back to the platform.
         </p>
-            <figure id="container">
-                <img src="images/network_legend1.png" alt="legend for network, red is 'data', green is 'intern' and blue is 'analyst'" style="width: 25vw; z-index: 1; left:50px; top:50px;" class="draggable">
-                <img src="images/network_13-11-25.png" alt="My Linkedin network run through the program, some user nodes are red, green, blue, or pink" style="z-index: 2; left:50px; top:50px;" class="draggable">
+            <figure id="network">
+                <img src="images/network_13-11-25.png" alt="My Linkedin network run through the program, some user nodes are red, green, blue, or pink" id="network_graph">
+                <img src="images/network_legend1.png" alt="legend for network, red is 'data', green is 'intern' and blue is 'analyst'" id="network_legend">
+                <figcaption style="text-align: center;">My LinkedIn network as of 13 November, 2025</figcaption>
             </figure>
             <figcaption style="text-align: center;"><i>My LinkedIn network as of 13 November, 2025</i></figcaption>
         <p>
@@ -78,12 +97,29 @@
             term frequency. For now, the program only takes individual words into account (so combined phrases are not factored into anything). The user can also
             provide (up to three) terms to search by/include by default in the RGB calculation, regardless of how often they appear.
         </p>
-        <h2>Experience (talk about metrics!!!)</h2>
+
+        <h3>Network Analysis on Purchases of Political Books</h3>
+        <p>
+            Based on a dataset from 2004, collected by Krebs, V., I wrote up an analysis on grouping behavior of political books purchases from during the US presidental election.
+            Through graph analysis using <em>Gephi</em> and <em>Tableau</em>, I determined several groups of "buyers" for political books; also categorizing their estimated leanings 
+            using their purchases based on clustering and centrality. I also hypothosized how these groups have changed in recent elections and what other topics this model could apply to.
+        </p>
+        <img src="images/politicalbooks.png" alt="please visit [] to read the text">
+
+        <h3>Text-based Adventure Game</h3>
+        <p>
+            This is one of my first projects, back from high school, but I am still very proud of the work I put in, even today. Made in <em>Python</em>, you play as a detective tasked with
+            solving a murder mystery. While a relatively simple premise, the real twist is when you replay it ;)
+            <br>> See here to give it a try!
+        </p>
+
+        <h2 id="experience">Experience (talk about metrics!!!)</h2>
         <h3>Ivy Capital Partners | Dublin, Ireland</h3>
         <h4>Intern [Sept - Nov, 2025]</h4>
         <p>
             Working with a variety of global clients to bring them key insights for the work done by Ivy Capital. 
         </p>
+
         <h3>Reporter Magazine | Rochester, NY, US</h3>
         <h4>IT Manager & Systems Admin [August 2024 - Current]</h4>
         <p>
@@ -95,4 +131,6 @@
 
         <script src="draggable_network.js"></script>
     </body>
+
+
 </html>
