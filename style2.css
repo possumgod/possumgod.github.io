@@ -1,0 +1,21 @@
+#container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border: 3px solid #333;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+.draggable {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  cursor: grab;
+  user-select: none;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
