@@ -45,3 +45,22 @@ p {
 a {
     color: rgb(70, 77, 119);
 }
+
+#container {
+  position: relative;
+  width: 100vw;
+  height: 60%;
+  border: 3px solid #333;
+  background: white;
+  overflow: hidden;
+}
+
+.draggable {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}

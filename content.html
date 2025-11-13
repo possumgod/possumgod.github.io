@@ -29,7 +29,7 @@
                     <a href="/Files/DG_Resume.pdf" download>Resume</a>
                 </td>
                 <td>
-                    <a href="eli@rgallagher.com">Email</a>
+                    <a href="mailto:eli@rgallagher.com">Email</a>
                 </td>
                 </nav>
             </tr>
@@ -67,10 +67,11 @@
             correspond to the duration of that connection. Additionally, each node is hyperlinked to that user's profile, making it easier to migrate this 
             information back to the platform.
         </p>
-            <figure>
-                <img src="images/network_13-11-25.png" alt="My Linkedin network run through the program, some user nodes are red, green, blue, or pink">
-                <figcaption style="text-align: center;">My LinkedIn network as of 13 November, 2025</figcaption>
+            <figure id="container">
+                <img src="images/network_legend1.png" alt="legend for network, red is 'data', green is 'intern' and blue is 'analyst'" style="width: 25vw; z-index: 1; left:50px; top:50px;" class="draggable">
+                <img src="images/network_13-11-25.png" alt="My Linkedin network run through the program, some user nodes are red, green, blue, or pink" style="z-index: 2; left:50px; top:50px;" class="draggable">
             </figure>
+            <figcaption style="text-align: center;"><i>My LinkedIn network as of 13 November, 2025</i></figcaption>
         <p>
             Each node's color is determined by an RGB value, this value is determined by the top three 'relevant' terms from term frequency compared to the root
             user's headline. If a user's headline contains none of the most frequent terms, then the color is grey; otherwise, the RGB value (aka the relevancy) is calculated using
@@ -91,5 +92,7 @@
         <h2>Socials</h2>
         <li><a href="https://www.linkedin.com/in/devlin-gallagher">LinkedIn</a></li>
         <li><a href="https://substack.com/@possumgod?">Substack</a></li>
+
+        <script src="draggable_network.js"></script>
     </body>
 </html>
