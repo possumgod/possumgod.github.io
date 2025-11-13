@@ -53,6 +53,7 @@ a {
     position: relative;
     width: 100vw;
     height: auto;
+    max-height: 50em;
 }
 
 #network_graph {
@@ -71,4 +72,10 @@ a {
     float: right;
     top: -25px;
     right: 30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
