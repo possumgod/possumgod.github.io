@@ -1,4 +1,7 @@
 header {
+    position: sticky;
+    top: 0px;
+    left: 0;
     width: 100vw;
     background-color: black;
 }
@@ -19,12 +22,14 @@ nav {
 }
 
 body {
+    overflow-x: hidden;
     background-color: rgb(244, 237, 237);
+    margin-left: 200px;    
 }
 
 h1 {
     color: rgb(98, 168, 124);
-    font-family: Courier, monospace
+    font-family: Courier, monospace;
 }
 
 h2 {
@@ -71,12 +76,46 @@ a {
     height: 40%;
     z-index: 2;
     float: right;
-    top: -25px;
+    top: -30px;
     right: 30px;
+    margin-right: 200px;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#prof_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background: rgb(0, 0, 0);
+    padding-top: 5.75rem;
+    font-family: Courier;
+    font-weight: bold;
+}
+
+#prof_nav ul {
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+    padding-inline: 15px;
+}
+
+#prof_nav li {
+    margin-bottom: 8px;
+}
+
+#prof_nav a {
+    color: rgb(164, 140, 195);
+}
+
+#main_info {
+    font-size: 20px;
+    padding-top: 30px;
 }
