@@ -1,6 +1,6 @@
 header {
     position: sticky;
-    top: 0px;
+    top: 0;
     left: 0;
     width: 100vw;
     background-color: black;
@@ -13,18 +13,27 @@ header h1 {
 }
 
 header a {
-    font-size: 16px;
+    font-size: 20px;
     color: rgb(207, 228, 215);
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: none;
 }
 
-nav {
+header a.hover {
+    color: rgb(164, 140, 195);
+    text-decoration: underline;
+}
+
+#main_nav a {
+    font-size: 20px;
     text-align: center;
 }
 
 body {
     overflow-x: hidden;
     background-color: rgb(244, 237, 237);
-    margin-left: 200px;    
+    margin-left: 210px;   
+    margin-top: 0px; 
 }
 
 h1 {
@@ -50,7 +59,10 @@ p {
 
 a {
     color: rgb(70, 77, 119);
-    text-decoration: underline;
+}
+
+td {
+    text-align: center;
 }
 
 #network {
