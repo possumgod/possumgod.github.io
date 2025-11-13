@@ -60,6 +60,7 @@ a {
     border: 1px solid rgb(190, 190, 190);
     position: relative;
     width: 80%;
+    max-width: 730px;
     height: auto;
     z-index: 1;
 }
