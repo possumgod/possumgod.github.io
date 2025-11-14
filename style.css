@@ -144,7 +144,8 @@ td {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+    left: 200px;
     margin-top: 40px;
 }
 
@@ -164,6 +165,7 @@ td {
 
 .article-info {
     text-align: center;
+    height: 100px;
 }
 
 .article-info h5 {
@@ -171,9 +173,11 @@ td {
     font-size: 1.4rem;
     margin-bottom: 10px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .date {
     color: #555;
     margin-top: 4px;
+    text-decoration: none;
 }
