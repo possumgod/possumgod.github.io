@@ -55,11 +55,15 @@
                         <li><a href="#TBG">Text-based Murder Mystery Game</a></li>
                     </ul>
                 <li id="main_info"><a href="#experience">Experience</a></li>
+                    <ul>
+                        <li><a href="#ivy">Ivy Capital Partners</a></li>
+                        <li><a href="#rep">Reporter Magazine</a></li>
+                    </ul>
             </ul>
         </nav>
-        <h2 id="projects">Projects</h2>
+        <h2 id="projects" class="sidemenu">Projects</h2>
 
-        <h3 id="MRS">Music Retrival System</h3>
+        <h3 id="MRS" class="sidemenu">Music Retrival System</h3>
         <p>
             Originally built for my Computational Music Theory class final project, the following is a retrieval system using similar techniques 
             to TF-IDF in Information Retrieval to return closely related music pieces in a collection given a query file. The project relies on
@@ -68,7 +72,7 @@
             <br>> See here for the github project
         </p> 
 
-        <h3 id="DF">ASA Datafest Presentation on Coworking Spaces</h3>
+        <h3 id="DF" class="sidemenu">ASA Datafest Presentation on Coworking Spaces</h3>
         <p>
             The American Statistical Association's Datafest is a 3-day data analysis competition for undergraduate students to showcase their technical & 
             soft skills. In 2025, <a href="https://www.rit.edu/science/datafest">one of the events was held at RIT</a>, my university; my team,
@@ -82,7 +86,7 @@
             <br><a href="Files/N5_The_Horrors_LLC.pdf" download>>Paper download (draft)</a>
         </p>
 
-        <h3 id="LNV">LinkedIn Network Visualization</h3>
+        <h3 id="LNV" class="sidemenu">LinkedIn Network Visualization</h3>
         <p style="padding-bottom: 5px;">
             Using term frequency and bag-of-words methods, the program creates a visualization of a user's LinkedIn connections. Using exported data from
             LinkedIn, a network graph is generated using the Networkx and Matplot libraries. With node colors based on search terms and/or frequency of terms 
@@ -94,7 +98,7 @@
                 <img src="images/network_13-11-25.png" alt="My Linkedin network run through the program, some user nodes are red, green, blue, or pink" id="network_graph">
                 <img src="images/network_legend1.png" alt="legend for network, red is 'data', green is 'intern' and blue is 'analyst'" id="network_legend">
             </figure>
-            <figcaption style="text-align: center;"><i>My LinkedIn network as of 13 November, 2025</i></figcaption>
+            <figcaption style="text-align: center;"><i>My LinkedIn network as of 13th of November, 2025</i></figcaption>
         <p>
             Each node's color is determined by an RGB value, this value is determined by the top three 'relevant' terms from term frequency compared to the root
             user's headline. If a user's headline contains none of the most frequent terms, then the color is grey; otherwise, the RGB value (aka the relevancy) is calculated using
@@ -102,7 +106,7 @@
             provide (up to three) terms to search by/include by default in the RGB calculation, regardless of how often they appear.
         </p>
 
-        <h3 id="NAPB">Network Analysis on Purchases of Political Books</h3>
+        <h3 id="NAPB" class="sidemenu">Network Analysis on Purchases of Political Books</h3>
         <p>
             Based on a dataset from 2004, collected by Krebs, V., I wrote up an analysis on grouping behavior of political books purchases from during the US presidental election.
             Through graph analysis using <em>Gephi</em> and <em>Tableau</em>, I determined several groups of "buyers" for political books; also categorizing their estimated leanings 
@@ -117,23 +121,49 @@
             <br>> <a href="text_game.html">See here to give it a try!</a>
         </p>
 
-        <h2 id="experience">Experience (talk about metrics!!!)</h2>
-        <h3>Ivy Capital Partners | Dublin, Ireland</h3>
+        <h2 id="experience" class="sidemenu">Experience (talk about metrics!!!)</h2>
+        <h3 id="ivy">Ivy Capital Partners | Dublin, Ireland</h3>
         <h4>Intern [Sept - Nov, 2025]</h4>
         <p>
             Working with a variety of global clients to bring them key insights for the work done by Ivy Capital. 
         </p>
 
-        <h3>Reporter Magazine | Rochester, NY, US</h3>
-        <h4>IT Manager & Systems Admin [August 2024 - Current]</h4>
+        <h3 id="rep" class="sidemenu">Reporter Magazine | Rochester, NY, US</h3>
+        <h4>IT Manager & Systems Admin [September 2024 - Current]</h4>
         <p>
-            Responsiable for website management and content migration.
+            Responsiable for website management and content migration. Site traffic has increased by more than 120% and user stickiness (Weekly users / Monthly users) has steadily increased 
+            by 25%. Our retention rate is on average 65% higher than expected, according to Google Site Analytics; our user engagement duration has also increased by almost 2 weeks.
         </p>
+        <h4>Technology Section Editor [August 2023 - August 2024]</h4>
+            Wrote a small variety of articles, from a piece about the <a href="https://reporter.rit.edu/6579/october-2023/whats-the-buzz-with-beekeeping-club">Beekeeping Club</a> to 
+            <a href="https://reporter.rit.edu/6581/tech/phishing-on-the-rise">preventing falling scam to phishing attacks</a>; both of which were published in print.
+        </p>
+        
+        <div class="articles">
+            <div class="article-card">
+                <a href="https://reporter.rit.edu/6579/october-2023/whats-the-buzz-with-beekeeping-club">
+                <img src="images/bees.png" alt="Beekeeping">
+                </a>
+                <div class="article-info">
+                <h5>What’s the Buzz With Beekeeping Club?</h5>
+                <p class="date">November 1, 2023</p>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <a href="https://reporter.rit.edu/6581/tech/phishing-on-the-rise">
+                <img src="images/phishing.png" alt="Phishing">
+                </a>
+                <div class="article-info">
+                <h5>Phishing on the Rise</h5>
+                <p class="date">September 12, 2023</p>
+                </div>
+            </div>
+        </div>
+
         <h2>Socials</h2>
         <li><a href="https://www.linkedin.com/in/devlin-gallagher">LinkedIn</a></li>
         <li><a href="https://substack.com/@possumgod?">Substack</a></li>
-
-        <script src="sidebar.js"></script>
     </body>
 
 
