@@ -17,7 +17,7 @@
         <table style="width: 100%;">
             <tr>
                 <td style="width: 5.5em;">
-                    <img src="images/favicon.png" alt="possum icon drawn by me" style="height: 5em;">
+                    <img src="images/logo.png" alt="possum icon drawn by me" style="height: 5em;">
                 </td>
                 <td>
                     <h1 style="text-align: left;">POSSUMGOD</h1>
@@ -49,7 +49,7 @@
                 <li id="main_info"><a href="#projects" class="active">Projects</a></li>
                     <ul>
                         <li><a href="#MRS">Music Retrieval System</a></li>
-                        <li><a href="#DF">ASA Datafest</a></li>
+                        <li><a href="#DF">ASA DataFest</a></li>
                         <li><a href="#LNV">LinkedIn Network Visualization</a></li>
                         <li><a href="#NAPB">Network Analysis on Political Book Purchases</a></li>
                         <li><a href="#TBG">Text-based Murder Mystery Game</a></li>
@@ -63,7 +63,7 @@
         </nav>
         <h2 id="projects" class="sidemenu">Projects</h2>
 
-        <h3 id="MRS" class="sidemenu">Music Retrival System</h3>
+        <h3 id="MRS" class="sidemenu">Music Retrieval System</h3>
         <p>
             Originally built for my Computational Music Theory class final project, the following is a retrieval system using similar techniques 
             to TF-IDF in Information Retrieval to return closely related music pieces in a collection given a query file. The project relies on
@@ -72,10 +72,10 @@
             <br>> See here for the github project
         </p> 
 
-        <h3 id="DF" class="sidemenu">ASA Datafest Presentation on Coworking Spaces</h3>
+        <h3 id="DF" class="sidemenu">ASA DataFest Presentation on Coworking Spaces</h3>
         <p>
-            The American Statistical Association's Datafest is a 3-day data analysis competition for undergraduate students to showcase their technical & 
-            soft skills. In 2025, <a href="https://www.rit.edu/science/datafest">one of the events was held at RIT</a>, my university; my team,
+            The American Statistical Association's DataFest is a 3-day data analysis competition for undergraduate students to showcase their technical & 
+            soft skills. In 2025, <a href="https://www.rit.edu/science/datafest" target="_blank">one of the events was held at RIT</a>, my university; my team,
             <i>The Horrors, LLC</i>, got 3rd in the "Best Insights" category (despite being our first year participating!). Each group gave a presentation to
             a panel of judges and peers on our findings, we used <em>Python</em>, <em>R</em>, and <em>Excel</em> to support our hypothesis.
         </p>
@@ -89,7 +89,7 @@
         <h3 id="LNV" class="sidemenu">LinkedIn Network Visualization</h3>
         <p style="padding-bottom: 5px;">
             Using term frequency and bag-of-words methods, the program creates a visualization of a user's LinkedIn connections. Using exported data from
-            LinkedIn, a network graph is generated using the Networkx and Matplot libraries. With node colors based on search terms and/or frequency of terms 
+            LinkedIn, a network graph is generated using the Networkx and MatPlot libraries. With node colors based on search terms and/or frequency of terms 
             from the root user's headline, it creates a simple visualization of a user's connections. The distances of each node from the root user also 
             correspond to the duration of that connection. Additionally, each node is hyperlinked to that user's profile, making it easier to migrate this 
             information back to the platform.
@@ -108,9 +108,16 @@
 
         <h3 id="NAPB" class="sidemenu">Network Analysis on Purchases of Political Books</h3>
         <p>
-            Based on a dataset from 2004, collected by Krebs, V., I wrote up an analysis on grouping behavior of political books purchases from during the US presidental election.
+            Based on a dataset from 2004, collected by Krebs, V., I wrote up an analysis on grouping behavior of political books purchases from during the US presidential election.
             Through graph analysis using <em>Gephi</em> and <em>Tableau</em>, I determined several groups of "buyers" for political books; also categorizing their estimated leanings 
-            using their purchases based on clustering and centrality. I also hypothosized how these groups have changed in recent elections and what other topics this model could apply to.
+            using their purchases based on clustering and centrality. I also hypothesized how these groups have changed in recent elections and what other topics this model could apply to.
+        </p>
+        <p>
+            The graph has 105 nodes and 441 edges, where the edges represent books that were often bought together. The average degree was 8.4 (so people were buying 9-10 books). 
+            I ran though a few different layouts, and decided Fruchterman-Reingold's was visually appealing and made graphical sense. When working with the graph in Gephi, I applied a color 
+            ranking based on closeness centrality (pink is low, green is high) and node sizing based on clustering (the smaller the node, the lower the coefficient). I found that many nodes 
+            with low closeness centrality also had high clustering, which I think implies that while those books may not be bought with as wide of a variety, they are frequently 
+            bought with a small group.
         </p>
         <img src="images/politicalbooks.png" alt="please visit [] to read the text" style="width: 75%;" class="center">
 
@@ -125,22 +132,27 @@
         <h3 id="ivy">Ivy Capital Partners | Dublin, Ireland</h3>
         <h4>Intern [Sept - Nov, 2025]</h4>
         <p>
-            Working with a variety of global clients to bring them key insights for the work done by Ivy Capital. 
+            Working with a variety of global clients to bring them key insights through Ivy Capital's network. I sat in on and lead calls with entrepreneurs and CEOs for variety of companies.
+            Since Ivy is agnostic on sector, I quickly adapted to meet the needs of varying companies; communicating with pre-seed to Series B expansions.
+        </p>
+        <p>
+            Additionally, I've also made adjustments to their website, increasing usability and accessability. 
         </p>
 
         <h3 id="rep" class="sidemenu">Reporter Magazine | Rochester, NY, US</h3>
         <h4>IT Manager & Systems Admin [September 2024 - Current]</h4>
         <p>
-            Responsiable for website management and content migration. Site traffic has increased by more than 120% and user stickiness (Weekly users / Monthly users) has steadily increased 
+            Responsible for website management and content migration. Site traffic has increased by more than 120% and user stickiness (Weekly users / Monthly users) has steadily increased 
             by 25%. Our retention rate is on average 65% higher than expected, according to Google Site Analytics; our user engagement duration has also increased by almost 2 weeks.
         </p>
         <h4>Technology Section Editor [August 2023 - August 2024]</h4>
-            Wrote a small variety of articles, from a piece about the <a href="https://reporter.rit.edu/6579/october-2023/whats-the-buzz-with-beekeeping-club">Beekeeping Club</a> to 
-            <a href="https://reporter.rit.edu/6581/tech/phishing-on-the-rise">preventing falling scam to phishing attacks</a>; both of which were published in print.
+            Wrote a small variety of articles, from a piece about the Beekeeping Club to preventing falling scam to phishing attacks; both of which were published in print. I was also 
+            responsible for editing all articles in the Technology section. 
+            <br><i>(note: <strong>Reporter</strong> has since revamped our article sections)</i>.
         </p>
         
         <div class="articles">
-            <a href="https://reporter.rit.edu/6579/october-2023/whats-the-buzz-with-beekeeping-club">
+            <a href="https://reporter.rit.edu/6579/october-2023/whats-the-buzz-with-beekeeping-club" target="_blank">
             <div class="article-card">
                 <img src="images/bees.png" alt="Beekeeping">
                 <div class="article-info">
@@ -150,7 +162,7 @@
             </div>
             </a>
 
-            <a href="https://reporter.rit.edu/6581/tech/phishing-on-the-rise">
+            <a href="https://reporter.rit.edu/6581/tech/phishing-on-the-rise" target="_blank">
             <div class="article-card">
                 <img src="images/phishing.png" alt="Phishing">
                 <div class="article-info">
@@ -163,7 +175,7 @@
 
         <h2>Socials</h2>
         <li><a href="https://www.linkedin.com/in/devlin-gallagher">LinkedIn</a></li>
-        <li><a href="https://substack.com/@possumgod?">Substack</a></li>
+        <li><a href="https://substack.com/@possumgod?">SubStack</a></li>
     </body>
 
 
