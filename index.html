@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +8,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+
+        <script src="script.js" async defer></script>
     </head>
 
 
@@ -24,7 +24,10 @@
                 </td>
                 <nav id="main_nav">
                 <td>
-                    <a href="/index.html">Home</a>
+                    <a href="/index.html" class="active-link">Home</a>
+                </td>
+                <td>
+                    <a href="/personal.html">Personal</a>
                 </td>
                 <td>
                     <a href="https://www.linkedin.com/in/devlin-gallagher" target="_blank">LinkedIn</a>
@@ -33,7 +36,7 @@
                     <a href="/Files/DG_Resume.pdf" download>Resume</a>
                 </td>
                 <td>
-                    <a href="mailto:eli@rgallagher.com">Email</a>
+                    <a href="mailto:eli@rgallagher.com" target="_blank">Email</a>
                 </td>
                 </nav>
             </tr>
@@ -42,7 +45,6 @@
 
 
     <body>
-        <script src="" async defer></script>
         <h1>Professional Information</h1>
         <nav id="prof_nav" style="z-index: 0">
             <ul>
@@ -59,8 +61,15 @@
                         <li><a href="#ivy">Ivy Capital Partners</a></li>
                         <li><a href="#rep">Reporter Magazine</a></li>
                     </ul>
+                <li id="main_info"><a href="#coursework">Coursework</a></li>
+                    <ul>
+                        <li><a href="#RIT">Rochester Institute of Technology</a></li>
+                        <li><a href="#DVU">Delaware Valley University</a></li>
+                        <li><a href="#GCA">Global Career Accelerator</a></li>
+                    </ul>
             </ul>
         </nav>
+
         <h2 id="projects" class="sidemenu">Projects</h2>
 
         <h3 id="MRS" class="sidemenu">Music Retrieval System</h3>
@@ -68,7 +77,7 @@
             Originally built for my Computational Music Theory class final project, the following is a retrieval system using similar techniques 
             to TF-IDF in Information Retrieval to return closely related music pieces in a collection given a query file. The project relies on
             the PrettyMIDI library to dissect and compare information stored in the files.
-            <br>> See here for my paper submission for the MCM (draft)
+            <br>> See here for my paper submission for the Mathematics and Computation in Music Conference (draft)
             <br>> See here for the github project
         </p> 
 
@@ -128,13 +137,14 @@
             <br>> <a href="text_game.html">See here to give it a try!</a>
         </p>
 
-        <h2 id="experience" class="sidemenu">Experience (talk about metrics!!!)</h2>
+        <h2 id="experience" class="sidemenu">Experience</h2>
+        
         <h3 id="ivy">Ivy Capital Partners | Dublin, Ireland</h3>
         <h4>Intern [Sept - Nov, 2025]</h4>
         <p>
             Working with a variety of global clients to bring them key insights through Ivy Capital's network. I participated in calls with entrepreneurs and CEOs for variety of companies,
             including TDK, ISA, Auddy, and many more. Since Ivy is agnostic on sector, I quickly adapted to meet the needs of varying companies; communicating with pre-seed to Series B expansions. 
-            By using <em>JavaScript</em>, I also created workflows with Microsoft integration to automate processes, allowing the team to focus on client engagement:
+            By using <em>JSON</em>, I also created workflows with Microsoft integration to automate processes, allowing the team to focus on client engagement:
             <ul>
                 <li>A weekly reminder for clients that hadn't been interacted with for a designated amount of time</li>
                 <li>A slide deck generated post-meeting using AI to determine objectives for the partnership for new clients</li>
@@ -142,12 +152,12 @@
             </ul>
         </p>
         <p>
-            Additionally, I've also made adjustments to their website, increasing usability and accessibility. I optimized Ivy Capital's website for Google SEO rankings, increasing the score by
-            more than 20 points. I also increased accessibility by 25%, based on SiteImprove AI's scoring, this included ensuring all the elements were keyboard-navigable, a screen reader could
-            accurate parse each page, and the site elements had high readability contrast.
+            Additionally, I've also made adjustments to their website in <em>JavaScript</em> and <em>HTML</em>, increasing usability and accessibility. I optimized Ivy Capital's website for Google SEO rankings, 
+            increasing the score by more than 20 points. I also increased accessibility by 25%, based on SiteImprove AI's scoring, this included ensuring all the elements were keyboard-navigable, a screen reader could
+            accurate parse each page, and the site elements had high readability contrast. These changes have had a proven effect, as site traffic during my internship has overall increased by 33% (per month).
         </p>
 
-        <h3 id="rep" class="sidemenu">Reporter Magazine | Rochester, NY, US</h3>
+        <h3 id="rep" class="sidemenu">Reporter Magazine | Rochester, NY</h3>
         <h4>IT Manager & Systems Admin [September 2024 - Current]</h4>
         <p>
             Responsible for website management and content migration. Site traffic has increased by more than 120% and user stickiness (Weekly users / Monthly users) has steadily increased 
@@ -180,6 +190,28 @@
             </div>
             </a>
         </div>
+
+        <h2 id="Coursework" class="sidemenu">Relevant Coursework</h2>
+        
+        <h3 id="RIT">Rochester Institute of Technology | Rochester, NY</h3>
+        <h4>Bachelor of Science: Computer Science & Computational Math Major, Chinese Language Minor [2022 - Current]</h4>
+        <p>
+
+        </p>
+
+        <h3 id="DVU">Delaware Valley University | Doylestown, PA</h3>
+        <h4>Part-time student [2019 - Current]</h4>
+        <p>
+            Part-time student at DVU, taken courses in Video Editing, Physics & Mathematics, and Business. 
+        </p>
+
+        <h3 id="GCA">Global Career Accelerator</h3>
+        <p>
+            The Global Career Accelerator offers courses that provide the soft skills needed for global teamwork and professional development. I took courses in Data Analytics and Data Visualization.
+            This includes group projects 
+        </p>
+        <h4>Certifications</h4>
+
     </body>
 
 
