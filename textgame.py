@@ -5,7 +5,7 @@ list_sus = []
 inventory = {'key':False, 'grey fabric':False, 'claw marks':False, 'witness statement':False, 'drugs':False, 'body':False}
 other_stuff = {'car_here':True, 'barcon':True, 'clerk_talk':False, 'clerk_kill':False, 'car_name':False, 'dog_here':True, 'clerk_here':True, 'cleaner':False}
 
-ending = []
+ending = ''
 pat = 0
 introvert = 0
 evidence = 0

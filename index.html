@@ -1,87 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Devlin Gallagher | Data Analyst & Programmer</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-
-        <script src="script.js" async defer></script>
-    </head>
-
-
-    <header style="margin-left: -200px; z-index: 3;">
-        <table style="width: 100%;">
-            <tr>
-                <td style="width: 5.5em;">
-                    <img src="images/logo.png" alt="possum icon drawn by me" style="height: 5em;">
-                </td>
-                <td>
-                    <h1 style="text-align: left;">POSSUMGOD</h1>
-                </td>
-                <nav id="main_nav">
-                <td>
-                    <a href="/index.html" class="active-link">Home</a>
-                </td>
-                <td>
-                    <a href="/personal.html">Personal</a>
-                </td>
-                <td>
-                    <a href="https://www.linkedin.com/in/devlin-gallagher" target="_blank">LinkedIn</a>
-                </td>
-                <td>
-                    <a href="/Files/DG_Resume.pdf" download>Resume</a>
-                </td>
-                <td>
-                    <a href="mailto:eli@rgallagher.com" target="_blank">Email</a>
-                </td>
-                </nav>
-            </tr>
-        </table>
-    </header>
-
+    <script src="header.js"></script>
 
     <body>
+    <div class="scrollable">
         <h1>Professional Information</h1>
-        <nav id="prof_nav" style="z-index: 0">
-            <ul>
-                <li id="main_info"><a href="#projects" class="active">Projects</a></li>
-                    <ul>
-                        <li><a href="#MRS">Music Retrieval System</a></li>
-                        <li><a href="#DF">ASA DataFest</a></li>
-                        <li><a href="#LNV">LinkedIn Network Visualization</a></li>
-                        <li><a href="#NAPB">Network Analysis on Political Book Purchases</a></li>
-                        <li><a href="#TBG">Text-based Murder Mystery Game</a></li>
-                    </ul>
-                <li id="main_info"><a href="#experience">Experience</a></li>
-                    <ul>
-                        <li><a href="#ivy">Ivy Capital Partners</a></li>
-                        <li><a href="#rep">Reporter Magazine</a></li>
-                    </ul>
-                <li id="main_info"><a href="#coursework">Coursework</a></li>
-                    <ul>
-                        <li><a href="#RIT">Rochester Institute of Technology</a></li>
-                        <li><a href="#DVU">Delaware Valley University</a></li>
-                        <li><a href="#GCA">Global Career Accelerator</a></li>
-                    </ul>
-            </ul>
-        </nav>
-
         <h2 id="projects" class="sidemenu">Projects</h2>
 
         <h3 id="MRS" class="sidemenu">Music Retrieval System</h3>
-        <p>
+        <div class="MRS_output">
+        <p style="margin: 0;">
             Originally built for my Computational Music Theory class final project, the following is a retrieval system using similar techniques 
             to TF-IDF in Information Retrieval to return closely related music pieces in a collection given a query file. The project relies on
             the PrettyMIDI library to dissect and compare information stored in the files.
             <br>> See here for my paper submission for the Mathematics and Computation in Music Conference (draft)
             <br>> See here for the github project
-        </p> 
+        </p>
+        <figure style="margin-top: 0; margin-bottom: 0;">
+            <img src="images/MRStest_output.png" style="width: 350px; align-items: center;" alt="text that reads: 'TestFiles > GF Theme: UT Determination: 28.178, ABBA - Dancing Queen: 75.769">
+            <figcaption>
+                Sample output from MRS using the first 20 notes from the Gravity Falls Theme as a query
+            </figcaption>
+        </figure>
+        </div>
 
-        <h3 id="DF" class="sidemenu">ASA DataFest Presentation on Coworking Spaces</h3>
+        <h3 id="DF" class="sidemenu" style="display: block;">ASA DataFest Presentation</h3>
         <p>
             The American Statistical Association's DataFest is a 3-day data analysis competition for undergraduate students to showcase their technical & 
             soft skills. In 2025, <a href="https://www.rit.edu/science/datafest" target="_blank">one of the events was held at RIT</a>, my university; my team,
@@ -91,8 +34,8 @@
         <p>
             The dataset was comprised of leasing and property information for a leasing company focused in the corporate leasing sector. Out of the various
             industries in the dataset, we decided to focus on determining trends in successful Coworking companies, creating a model for the properties they 
-            leased that are factors of their success. [change phrasing here]
-            <br><a href="Files/N5_The_Horrors_LLC.pdf" download>>Paper download (draft)</a>
+            leased that are factors of their success.
+            <br><a href="Files/N5_The_Horrors_LLC.pdf" download>> Paper download (draft)</a>
         </p>
 
         <h3 id="LNV" class="sidemenu">LinkedIn Network Visualization</h3>
@@ -107,7 +50,7 @@
                 <img src="images/network_13-11-25.png" alt="My Linkedin network run through the program, some user nodes are red, green, blue, or pink" id="network_graph">
                 <img src="images/network_legend1.png" alt="legend for network, red is 'data', green is 'intern' and blue is 'analyst'" id="network_legend">
             </figure>
-            <figcaption style="text-align: center;"><i>My LinkedIn network as of 13th of November, 2025</i></figcaption>
+            <figcaption>My LinkedIn network as of 13th of November, 2025</figcaption>
         <p>
             Each node's color is determined by an RGB value, this value is determined by the top three 'relevant' terms from term frequency compared to the root
             user's headline. If a user's headline contains none of the most frequent terms, then the color is grey; otherwise, the RGB value (aka the relevancy) is calculated using
@@ -115,7 +58,7 @@
             provide (up to three) terms to search by/include by default in the RGB calculation, regardless of how often they appear.
         </p>
 
-        <h3 id="NAPB" class="sidemenu">Network Analysis on Purchases of Political Books</h3>
+        <h3 id="NAPB" class="sidemenu">Network Analysis on Political Book Purchases</h3>
         <p>
             Based on a dataset from 2004, collected by Krebs, V., I wrote up an analysis on grouping behavior of political books purchases from during the US presidential election.
             Through graph analysis using <em>Gephi</em> and <em>Tableau</em>, I determined several groups of "buyers" for political books; also categorizing their estimated leanings 
@@ -133,7 +76,8 @@
         <h3 id="TBG">Text-based Adventure Game</h3>
         <p>
             This is one of my first projects, back from high school, but I am still very proud of the work I put in, even today. Made in <em>Python</em>, you play as a detective tasked with
-            solving a murder mystery. While a relatively simple premise, the real twist is when you replay it ;)
+            solving a murder mystery. While a relatively simple premise, the real twist is when you replay it; there are 9 unique endings, with about 3 achievable in every run (the rest are
+            dependent on random events).
             <br>> <a href="text_game.html">See here to give it a try!</a>
         </p>
 
@@ -160,13 +104,15 @@
         <h3 id="rep" class="sidemenu">Reporter Magazine | Rochester, NY</h3>
         <h4>IT Manager & Systems Admin [September 2024 - Current]</h4>
         <p>
-            Responsible for website management and content migration. Site traffic has increased by more than 120% and user stickiness (Weekly users / Monthly users) has steadily increased 
-            by 25%. Our retention rate is on average 65% higher than expected, according to Google Site Analytics; our user engagement duration has also increased by almost 2 weeks.
+            Responsible for website management, content migration, and Campus Groups management. Site traffic has increased by more than 120% and user stickiness (Weekly users / Monthly users) has steadily increased 
+            by 25%. Our retention rate is on average 65% higher than expected, according to Google Site Analytics; our user engagement duration has also increased by almost 2 weeks. As a part of Eboard staff, I am also
+            responsible for attending and leading weekly meetings with general members and university staff. This includes giving webiste usage demos for members, presentations on new features, and executing feedback
+            on website features.
         </p>
         <h4>Technology Section Editor [August 2023 - August 2024]</h4>
             Wrote a small variety of articles, from a piece about the Beekeeping Club to preventing falling scam to phishing attacks; both of which were published in print. I was also 
-            responsible for editing all articles in the Technology section. 
-            <br><i>(note: <strong>Reporter</strong> has since revamped our article sections)</i>.
+            tasked with editing all articles in the Technology section. 
+            <br><i>(note: <strong>Reporter</strong> has since revamped our article sections, and the Technology section was dissolved)</i>.
         </p>
         
         <div class="articles">
@@ -196,7 +142,7 @@
         <h3 id="RIT">Rochester Institute of Technology | Rochester, NY</h3>
         <h4>Bachelor of Science: Computer Science & Computational Math Major, Chinese Language Minor [2022 - Current]</h4>
         <p>
-
+            I 
         </p>
 
         <h3 id="DVU">Delaware Valley University | Doylestown, PA</h3>
@@ -212,6 +158,7 @@
         </p>
         <h4>Certifications</h4>
 
+    </div>
     </body>
 
 
