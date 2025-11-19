@@ -22,10 +22,10 @@ document.writeln(' \
                     </td> \
                     <nav id="main_nav"> \
                     <td> \
-                        <a href="/index.html" class="active-link">Home</a> \
+                        <a href="index.html">Home</a> \
                     </td> \
                     <td> \
-                        <a href="/personal.html">Personal</a> \
+                        <a href="personal.html">Personal</a> \
                     </td> \
                     <td> \
                         <a href="https://www.linkedin.com/in/devlin-gallagher" target="_blank">LinkedIn</a> \
@@ -34,14 +34,13 @@ document.writeln(' \
                         <a href="/Files/DG_Resume.pdf" download>Resume</a> \
                     </td> \
                     <td> \
-                        <a href="mailto:eli@rgallagher.com" target="_blank">Email</a> \
+                        <a href="mailto:devlin@rgallagher.com" target="_blank">Email</a> \
                     </td> \
                     </nav> \
                 </tr> \
             </table> \
         </header> \
 ')
-
 
 // stack overflow for general content
 

@@ -1,14 +1,12 @@
 // Highlight current page as 'active-link' for formatting
-document.addEventListener("DOMContentLoaded", function() {
-    const currentPage = window.location.pathname.split("/").pop();
-    const links = document.querySelectorAll("a");
-
-    links.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active-link");
-        }
-    });
-});
+const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('/').pop();
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            }
+        });
 
 
 // Highlight active sidebar item based on the current hash (#section)

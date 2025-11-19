@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+ 
+        nav ul li a.active {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+ 
+<body>
+    <nav>
+        <ul>
+            <li><a href="test.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+
+    </nav>
+    <script>
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('/').pop();
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+ 
+</html>
