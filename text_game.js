@@ -64,10 +64,10 @@ let car_dude = false;
 let hotel_clerk = false;
 
 // random killer assignment (1..3)
-let x = Math.floor(Math.random() * 3) + 1;
-if (x === 1) bartender = true;
-if (x === 2) car_dude = true;
-if (x === 3) hotel_clerk = true;
+let x = Math.floor(Math.random() * 3);
+if (x === 0) bartender = true;
+if (x === 1) car_dude = true;
+if (x === 2) hotel_clerk = true;
 
 let killer = bartender ? "bartender" : car_dude ? "car dude" : "hotel clerk";
 
@@ -528,13 +528,13 @@ function room_bad() {
     print("Do you try to run or attempt to defend yourself?");
     ask((choice) => {
         choice = (choice || "").toLowerCase();
-        let escape = Math.floor(Math.random() * 2) + 1; // 1 or 2
+        let escape = Math.floor(Math.random() * 2); // 1 or 2
         if (choice === 'run') {
-            if (escape === 1) {
+            if (escape === 0) {
                 ending = 'Clerk Ending (1/2)';
                 return dead("You pointlessly try to run, but before you can run, she kills you and your body was never found.");
             }
-            if (escape === 2) {
+            if (escape === 1) {
                 other_stuff['clerk_here'] = false;
                 print("You somehow manage to escape the room, locking the door behind you. You run back to the lobby.");
                 return hotel_lobby();
