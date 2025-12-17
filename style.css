@@ -1,5 +1,6 @@
 :root {
     --menu-color: rgb(15, 15, 4);
+    --card-color: rgb(0, 0, 0);
     --img-z: 0
 }
 
@@ -65,7 +66,7 @@ header a:hover {
     color: rgb(164, 140, 195);
 }
 
-#prof_nav a.active {
+.active {
     color: rgb(255, 255, 255);
     text-decoration: underline;
 }
@@ -191,25 +192,45 @@ figcaption {
     padding-top: 30px;
 }
 
-.articles {
+.cards {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    max-width: 1400px;
     margin-bottom: 40px;
 }
 
-.articles a {
+.cards a {
     text-decoration: none;
+}
+
+.card {
+    background: rgb(247, 242, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.badge-card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.badge-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    text-decoration: none;
+    padding: 1px 2px 0px 2px; /*top right bottom left*/
 }
 
 .article-card {
     width: 350px;
-    background: rgb(247, 242, 255);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0, 0, 0);
 }
 
 .article-card img {
@@ -219,12 +240,12 @@ figcaption {
     text-decoration: none;
 }
 
-.article-info {
+.card-info {
     text-align: center;
     height: 100px;
 }
 
-.article-info h5, .transcript h5 {
+.card-info h5, .transcript h5 {
     margin-block-start: 1em;
     font-size: 1.4rem;
     margin-bottom: 10px;
@@ -239,14 +260,10 @@ figcaption {
 
 /*PERSONAL formatting*/
 
-.card {
+.video-card {
     display: flex;
     width: 1000px;
     max-height: 450px;
-    background: rgb(247, 242, 255);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0, 0, 0);
 }
 
 .video iframe {

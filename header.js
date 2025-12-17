@@ -31,7 +31,7 @@ document.writeln(' \
                         <a href="https://www.linkedin.com/in/devlin-gallagher" target="_blank">LinkedIn</a> \
                     </td> \
                     <td> \
-                        <a href="/Files/DG_Resume.pdf" download>Resume</a> \
+                        <a href="/Files/DevlinGallagher_Resume.pdf" download>Resume</a> \
                     </td> \
                     <td> \
                         <a href="mailto:devlin@rgallagher.com" target="_blank">Email</a> \
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentSection = null;
 
     headings.forEach(heading => {
-        const title = heading.textContent.trim().split("|")[0];
+        const title = heading.textContent.split("|")[0].trim();
         const id = heading.id || title.replace(/\s+/g, "-").toLowerCase();
         heading.id = id;
 
