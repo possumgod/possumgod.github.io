@@ -6,7 +6,7 @@ function print(msg = "", type = "story") {
     span.textContent = msg + "\n";
     
     if (type === "input") {
-        span.style.color = "#aaa"; // Make user input slightly grey
+        span.style.color = "#aaa";
         span.style.fontWeight = "bold";
     } else if (type === "error") {
         span.style.color = "red";
