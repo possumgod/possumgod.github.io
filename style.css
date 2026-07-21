@@ -285,6 +285,7 @@ figcaption {
     height: 350px;
     object-fit: cover;
     text-decoration: none;
+    overflow-y: auto;
 }
 
 #input {

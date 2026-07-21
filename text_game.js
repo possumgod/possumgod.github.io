@@ -1,12 +1,19 @@
-// text_game.py converted into JS
-// (I hate chatgpt but I was not doing all this manually so if there's fuckups I'm blaming that)
-
-
 const out = document.getElementById("output");
 const input = document.getElementById("input");
 
-function print(msg = "") {
-    out.innerHTML += msg + "\n";
+function print(msg = "", type = "story") {
+    const span = document.createElement("span");
+    span.textContent = msg + "\n";
+    
+    if (type === "input") {
+        span.style.color = "#aaa"; // Make user input slightly grey
+        span.style.fontWeight = "bold";
+    } else if (type === "error") {
+        span.style.color = "red";
+    }
+    
+    out.appendChild(span);
+    out.appendChild(document.createElement("br"));
     out.scrollTop = out.scrollHeight;
 }
 
@@ -19,8 +26,13 @@ let currentHandler = null;
 input.addEventListener("keydown", e => {
     if (e.key === "Enter") {
         let val = input.value.trim();
-        input.value = "";
-        if (currentHandler) currentHandler(val);
+        
+        if (val !== "") {
+            print("> " + val); 
+            
+            input.value = "";
+            if (currentHandler) currentHandler(val);
+        }
     }
 });
 
@@ -102,9 +114,8 @@ function add_sus(s) {
 
 function main() {
     clearOutput();
-    print("You are outside a hotel, you are here to investigate the death of a guest here.");
-    print("You have a blank notebook, you can keep a list of suspects and evidence there.");
-    print("If you find who the killer is, call the police and they'll make the arrest. Remember, you need enough evidence to successfully arrest someone.");
+    print("You are outside of a motel, you are here to investigate the death of a guest who was staying here. You have a blank notebook to keep a list of suspects and evidence. "
+        + "In order to make a successful arrest, you must have at least two pieces of evidence. Good luck.")
     outside();
 }
 
@@ -130,8 +141,6 @@ function outside() {
             print("You head inside to the hotel.");
             return hotel_lobby();
         } else if (choice.includes("dog") || choice.includes("pat")) {
-            print("You pat the dog. Cute.");
-            pat += 1;
             return pats();
         } else {
             print("Sorry but that's not a place you can go.");
@@ -141,12 +150,17 @@ function outside() {
 }
 
 function pats() {
-    if (pat === 5) {
+    if (pat == 0) {
+        print("You go over to the dog, it looks up at you happily. Do you pet the dog?");
+    }
+    else if (pat === 5) {
         print("The dog likes you a lot, you have acquired dog.");
         add_sus('dog');
         return outside();
     }
-    print("It wants more pats. Will you give more pats?");
+    else {
+        print("It wants more pats. Will you give more pats?");
+    }
     ask((choice) => {
         choice = (choice || "").toLowerCase();
         if (choice === "yes" || choice.includes("pat")) {
