@@ -1,6 +1,9 @@
 :root {
     --menu-color: rgb(15, 15, 4);
-    --card-color: rgb(0, 0, 0);
+    --card-bkgrd-color: rgb(247, 242, 255);
+    --bkgrd-color: rgb(244, 237, 237);
+    --widget-bdr-color:  rgb(190, 190, 190);
+    --nav-link-color: rgb(164, 140, 195);
     --img-z: 0
 }
 
@@ -16,7 +19,7 @@ header {
 
 body {
     overflow: hidden;
-    background-color: rgb(244, 237, 237);
+    background-color: var(--bkgrd-color);
     box-sizing: border-box;
 }
 
@@ -31,12 +34,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-    background: rgb(247, 242, 255);
+    background: var(--card-bkgrd-color);
     margin-top: 185px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(164, 140, 195);
+    background: var(--nav-link-color);
     border-radius: 10px;
 }
 
@@ -50,7 +53,6 @@ body {
 }
 
 header h1 {
-    color: rgb(98, 168, 124);
     font-weight: bold;
     font-size: 48px;
 }
@@ -63,7 +65,7 @@ header a {
 }
 
 header a:hover {
-    color: rgb(164, 140, 195);
+    color: var(--nav-link-color);
 }
 
 .active {
@@ -133,7 +135,7 @@ figcaption {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid var(--widget-bdr-color);
     position: relative;
     width: 80%;
     max-width: 730px;
@@ -142,7 +144,7 @@ figcaption {
 }
 
 #network_legend {
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid var(--widget-bdr-color);
     position: absolute;
     height: 40%;
     float: right;
@@ -184,7 +186,7 @@ figcaption {
 }
 
 .prof_nav a {
-    color: rgb(164, 140, 195);
+    color: var(--nav-link-color);
 }
 
 .main_info {
@@ -206,7 +208,7 @@ figcaption {
 }
 
 .card {
-    background: rgb(247, 242, 255);
+    background: var(--card-bkgrd-color);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -280,9 +282,19 @@ figcaption {
     overflow-y: auto;
 }
 
+.game-card {
+    display: flex;
+    width: 100%;
+    max-height: max-content;
+    padding-bottom: 5px;
+    background: var(--menu-color);
+    color: var(--card-bkgrd-color);
+}
+
 #output {
     width: 100%;
-    height: 350px;
+    height: 500px;
+    padding: 10px;
     object-fit: cover;
     text-decoration: none;
     overflow-y: auto;
@@ -292,6 +304,4 @@ figcaption {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    background: #222;
-    color: #fff;
 }

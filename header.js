@@ -28,7 +28,7 @@ document.writeln(' \
                         <a href="personal.html">Personal</a> \
                     </td> \
                     <td> \
-                        <a href="https://www.linkedin.com/in/devlin-gallagher" target="_blank">LinkedIn</a> \
+                        <a href="mylinkedin.html">LinkedIn</a> \
                     </td> \
                     <td> \
                         <a href="/Files/DevlinGallagher_Resume.pdf" download>Resume</a> \
@@ -41,8 +41,6 @@ document.writeln(' \
             </table> \
         </header> \
 ')
-
-// stack overflow for general content
 
 // Find all h3 and h3 on the page, in doc order
 document.addEventListener("DOMContentLoaded", function() {
