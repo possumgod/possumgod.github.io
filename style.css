@@ -304,4 +304,6 @@ figcaption {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
+    background: var(--menu-color);
+    color: var(--card-bkgrd-color);
 }

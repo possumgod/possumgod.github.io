@@ -31,7 +31,7 @@ document.writeln(' \
                         <a href="mylinkedin.html">LinkedIn</a> \
                     </td> \
                     <td> \
-                        <a href="/Files/DevlinGallagher_Resume.pdf" download>Resume</a> \
+                        <a href="/files/DevlinGallagher_Resume.pdf" download>Resume</a> \
                     </td> \
                     <td> \
                         <a href="mailto:devlin@rgallagher.com" target="_blank">Email</a> \
