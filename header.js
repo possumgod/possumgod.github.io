@@ -7,7 +7,7 @@ document.writeln(' \
         <link rel="icon" type="image/x-icon" href="/images/favicon.png"> \
         <meta name="description" content=""> \
         <meta name="viewport" content="width=device-width, initial-scale=1"> \
-        <link rel="stylesheet" href="style.css"> \
+        <link rel="stylesheet" href="style/overall_style.css"> \
         <script src="script.js" async defer></script> \
     </head> \
 \
@@ -15,10 +15,10 @@ document.writeln(' \
             <table style="width: 100%;"> \
                 <tr> \
                     <td style="width: 5.5em;"> \
-                        <img src="images/logo.png" alt="possum icon drawn by me" style="height: 5em;"> \
+                        <img src="images/logo.png" alt="possum icon drawn by Bea Amurao" style="height: 5em;"> \
                     </td> \
                     <td> \
-                        <h1 style="text-align: left;">POSSUMGOD</h1> \
+                        <h1 class="title" style="text-align: left;">POSSUMGOD</h1> \
                     </td> \
                     <nav id="main_nav"> \
                     <td> \
