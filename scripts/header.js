@@ -22,14 +22,30 @@ document.writeln(' \
                     </td> \
                     <nav id="main_nav"> \
                     <td> \
-                        <a href="index.html">Home</a> \
+                        <a href="index.html">Portfolio</a> \
                     </td> \
                     <td> \
                         <a href="personal.html">Personal</a> \
                     </td> \
-                    <td> \
-                        <a href="mylinkedin.html">LinkedIn</a> \
-                    </td> \
+')
+
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    document.writeln(' \
+        <td> \
+            <a href="linkedin://in/devlin-gallagher/" target="_blank">LinkedIn</a> \
+        </td> \
+        ')
+}
+else {
+    document.writeln(' \
+        <td> \
+            <a href="mylinkedin.html">LinkedIn</a> \
+        </td> \
+    ')
+}
+
+document.writeln(' \
                     <td> \
                         <a href="/files/DevlinGallagher_Resume.pdf" download>Resume</a> \
                     </td> \

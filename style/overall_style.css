@@ -292,3 +292,15 @@ figcaption {
         width: 100%;
     }
 }
+
+@media only screen and (max-device-width: 999px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    img, figcaption {
+        display: none;
+    }
+}
