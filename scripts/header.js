@@ -18,7 +18,8 @@ document.writeln(' \
                         <img src="images/logo.png" alt="possum icon drawn by Bea Amurao" style="height: 5em;"> \
                     </td> \
                     <td> \
-                        <h1 class="title" style="text-align: left;">POSSUMGOD</h1> \
+                        <h1 class="title" style="text-align: left; margin-bottom: -5px; margin-top: 15px">POSSUMGOD</h1> \
+                        <figcaption style="text-align: left; color: rgb(244, 237, 237);">icon drawn by <a href="https://beaamurao-designer.framer.website" target="_blank" style="font-size: 16px; color: rgb(244, 237, 237); text-decoration: underline;">Bea Amurao </a></figcaption> \
                     </td> \
                     <nav id="main_nav"> \
                     <td> \
@@ -30,20 +31,17 @@ document.writeln(' \
 ')
 
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    document.writeln(' \
+document.writeln((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ? 
+    ' \
         <td> \
             <a href="linkedin://in/devlin-gallagher/" target="_blank">LinkedIn</a> \
         </td> \
-        ')
-}
-else {
-    document.writeln(' \
+        ':
+    ' \
         <td> \
             <a href="mylinkedin.html">LinkedIn</a> \
         </td> \
     ')
-}
 
 document.writeln(' \
                     <td> \

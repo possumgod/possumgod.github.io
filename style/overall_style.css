@@ -260,6 +260,11 @@ figcaption {
     margin-top: 4px;
 }
 
+.scrollable .sk-ww-linkedin-profile-post {
+    left: 200px; 
+    padding-right: 0px;
+}
+
 
 @media (max-width: 999px) {
     .title {
