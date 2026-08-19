@@ -25,7 +25,7 @@ body {
 
 .scrollable {
     position: absolute;
-    top: 120px;
+    top: 90px;
     left: 220px;
     right: 0;
     bottom: 0;
@@ -71,6 +71,22 @@ header a:hover {
 .active {
     color: rgb(255, 255, 255);
     text-decoration: underline;
+}
+
+#header_nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#main_nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex: 1;
+}
+
+#main_nav > div {
+    text-align: center;
 }
 
 #main_nav a {
@@ -267,9 +283,6 @@ figcaption {
 
 
 @media (max-width: 999px) {
-    .title {
-        display: none;
-    }
     .prof_nav {
         display: none;
     }
@@ -298,14 +311,103 @@ figcaption {
     }
 }
 
+@media (max-width: 725px) {
+    #header_nav {
+        flex-wrap: wrap;
+    }
+
+    #main_nav {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        flex-basis: 100%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .scrollable {
+        top: 100px;
+    }
+}
+
+
 @media only screen and (max-device-width: 999px) {
     ::-webkit-scrollbar {
         display: none;
     }
 }
 
-@media (max-width: 425px) {
-    img, figcaption {
+@media (max-width: 350px) {
+
+    figcaption, #title {
         display: none;
     }
+
+    #header_nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    #icon {
+        display: block;
+        height: 5em;
+    }
+
+    #main_nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18px;
+        row-gap: 2px;
+
+        margin: 0;
+        padding: 0;
+
+        position: static;
+        top: auto;
+        flex-basis: auto;
+    }
+
+    #main_nav div {
+        margin: 0;
+        padding: 0;
+    }
+
+    #main_nav a {
+        display: block;
+        text-align: left;
+    }
+
+    .scrollable {
+        top: 60px;
+    }
 }
+
+/*
+@media (max-width: 350px) {
+    img, figcaption, #title {
+        display: none;
+    }
+
+    #icon {
+        display: flex;
+    }
+
+    #header_nav {
+        width: 100px;
+    }
+
+    #main_nav {
+        top: -100px;
+        display: table;
+        margin: 0 auto 0 80px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        flex-basis: 100%;
+        
+    }
+
+    .scrollable {
+        top: 60px;
+    }
+} */

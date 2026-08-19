@@ -1,4 +1,3 @@
-
 document.writeln(' \
     <head> \
         <meta charset="utf-8"> \
@@ -8,51 +7,49 @@ document.writeln(' \
         <meta name="description" content=""> \
         <meta name="viewport" content="width=device-width, initial-scale=1"> \
         <link rel="stylesheet" href="style/overall_style.css"> \
-        <script src="script.js" async defer></script> \
+        <script src="scripts/script.js" async defer></script> \
     </head> \
 \
         <header> \
-            <table style="width: 100%;"> \
-                <tr> \
-                    <td style="width: 5.5em;"> \
-                        <img src="images/logo.png" alt="possum icon drawn by Bea Amurao" style="height: 5em;"> \
-                    </td> \
-                    <td> \
-                        <h1 class="title" style="text-align: left; margin-bottom: -5px; margin-top: 15px">POSSUMGOD</h1> \
-                        <figcaption style="text-align: left; color: rgb(244, 237, 237);">icon drawn by <a href="https://beaamurao-designer.framer.website" target="_blank" style="font-size: 16px; color: rgb(244, 237, 237); text-decoration: underline;">Bea Amurao </a></figcaption> \
-                    </td> \
-                    <nav id="main_nav"> \
-                    <td> \
+            <div style="width: 100%;" id="header_nav"> \
+                <div style="width: 5.5em;"> \
+                    <img id="icon" src="images/logo.png" alt="possum icon drawn by Bea Amurao" style="height: 5em;"> \
+                </div> \
+                <div> \
+                    <h1 id="title" style="text-align: left; margin-bottom: -5px; margin-top: 15px">POSSUMGOD</h1> \
+                    <figcaption style="text-align: left; color: rgb(244, 237, 237); margin-bottom: 5px;">icon drawn by <a href="https://beaamurao-designer.framer.website" target="_blank" style="font-size: 16px; color: rgb(244, 237, 237); text-decoration: underline;">Bea Amurao </a></figcaption> \
+                </div> \
+                <nav id="main_nav"> \
+                    <div> \
                         <a href="index.html">Portfolio</a> \
-                    </td> \
-                    <td> \
+                    </div> \
+                    <div> \
                         <a href="personal.html">Personal</a> \
-                    </td> \
+                    </div> \
 ')
 
 
 document.writeln((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ? 
     ' \
-        <td> \
+        <div> \
             <a href="linkedin://in/devlin-gallagher/" target="_blank">LinkedIn</a> \
-        </td> \
+        </div> \
         ':
     ' \
-        <td> \
+        <div> \
             <a href="mylinkedin.html">LinkedIn</a> \
-        </td> \
+        </div> \
     ')
 
 document.writeln(' \
-                    <td> \
-                        <a href="/files/DevlinGallagher_Resume.pdf" download>Resume</a> \
-                    </td> \
-                    <td> \
-                        <a href="mailto:devlin@rgallagher.com" target="_blank">Email</a> \
-                    </td> \
-                    </nav> \
-                </tr> \
-            </table> \
+                <div> \
+                    <a href="/files/DevlinGallagher_Resume.pdf" download>Resume</a> \
+                </div> \
+                <div> \
+                    <a href="mailto:devlin@rgallagher.com" target="_blank">Email</a> \
+                </div> \
+                </nav> \
+            </div> \
         </header> \
 ')
 
