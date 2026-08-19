@@ -94,3 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
     navContainer.innerHTML = html;
     document.body.insertBefore(navContainer, document.body.firstChild);
 });
+
+
+document.writeln(' \
+    <footer> &#xA9 2026 Devlin Gallagher </footer>')

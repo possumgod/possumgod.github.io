@@ -94,7 +94,7 @@ header a:hover {
     text-align: center;
 }
 
-h1, h5 {
+h1, h5, footer {
     color: rgb(98, 168, 124);
     font-family: Courier, monospace;
 }
@@ -276,9 +276,15 @@ figcaption {
     margin-top: 4px;
 }
 
-.scrollable .sk-ww-linkedin-profile-post {
-    left: 200px; 
-    padding-right: 0px;
+footer {
+    font-size: 12px;
+    position: fixed;
+    bottom: 10px;
+    width: 200px;
+    align-items: center;
+    padding-top: 5.75rem;
+    font-family: Courier;
+    font-weight: bold;
 }
 
 
@@ -382,32 +388,3 @@ figcaption {
         top: 60px;
     }
 }
-
-/*
-@media (max-width: 350px) {
-    img, figcaption, #title {
-        display: none;
-    }
-
-    #icon {
-        display: flex;
-    }
-
-    #header_nav {
-        width: 100px;
-    }
-
-    #main_nav {
-        top: -100px;
-        display: table;
-        margin: 0 auto 0 80px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        flex-basis: 100%;
-        
-    }
-
-    .scrollable {
-        top: 60px;
-    }
-} */
