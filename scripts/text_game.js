@@ -438,9 +438,37 @@ const scenes = {
         }
     },
     witness: {
-        text: [
-            [""]
-        ]
+        text: [],
+        choices: {
+
+        },
+        checks: {
+            askDrink: [!checkStory('hadDrink'),
+                [
+                    ["''I'm sorry, I'm afraid I was too busy with running the place that night.'' She tells you, ''the manager called off, so I had to pick up his work.'' ", "story"],
+                    ["She looks down the bar, as if searching for someone. ''But, he might might be able to help you.'' She gestures to a man sitting at the far end of the bar.", "story"],
+                    ["You thank her, and make your way over to him. ", "story"]
+                ],
+                []
+            ],
+            witnessIntro: [true,
+                [
+                    ["His appearance is a bit disheveled, like someone who doesn't know what to do with his time beside visit the local bar. ", "story"],
+                    ["But, you figure talking to him would be beneficial to your case, so you share needed pleasentries before begining your questioning. ", "story"],
+                ],
+                []
+            ],
+            driver: [driverK,
+                [
+                    [""]
+                ],
+                []
+            ],
+            clerk: [clerkK,
+                [],
+                []
+            ]
+        }
     },
     room: {
         text: [
@@ -569,7 +597,6 @@ function telephone() {
         print("You have no suspects, go find some evidence!");
         return lobby();
     } else {
-        // show unique suspects like Python's set(suspects)
         const unique = Array.from(new Set(suspects));
         print("the people you have suspect are " + unique.join(", "));
         print("You call the police, who do you arrest, if anyone?");
@@ -679,27 +706,6 @@ function barGood() {
         }
         print("Sorry that's not an action you can take.");
         return barGood();
-    });
-}
-
-function barBad() {
-    print("\nAs you drink, you start to feel a bit dizzy and ask the bartender if you can sit down somewhere else, she tells you can rest in the back and she goes with you to make sure you're okay.");
-    print("Once in the backroom, she sits you down on a crate.");
-    print("She locks the door and goes back over to you, pulling out a knife. Do you fight back or flee?");
-    ask((choice) => {
-        choice = (choice || "").toLowerCase();
-        if (choice.includes("flee")) {
-            ending = 'Bartender Ending';
-            return dead("You try to run for the door but you can't get it unlocked, she stabs you and you die.");
-        }
-        if (choice.includes("fight") || choice.includes("defend")) {
-            print("With all the strength you have left you charge at her, somehow you manage to knock her into one of the shelves, she is unconscious.");
-            print("You decide to leave her in her current state. After a few minutes you manage to get the door open, you head back to the lobby.");
-            storyChecks['barcon'] = false;
-            return lobby();
-        }
-        print("Sorry but that's not an action you can take.");
-        return barBad();
     });
 }
 
