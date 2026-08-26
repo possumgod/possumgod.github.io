@@ -43,7 +43,7 @@ document.writeln((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini
 
 document.writeln(' \
                 <div> \
-                    <a href="/files/DevlinGallagher_Resume.pdf" download="download">Resume</a> \
+                    <a href="/DevlinGallagher_Resume.pdf" download="download">Resume</a> \
                 </div> \
                 <div> \
                     <a href="mailto:devlin@rgallagher.com" target="_blank">Email</a> \
