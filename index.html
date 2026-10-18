@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
     <script src="scripts/header.js"></script>
+    <script>
+        fetch('files/polbooks_alt.txt')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('polbooks').alt = text.trim();
+            });
+</script>
 
     <body>
     <div class="scrollable">
@@ -14,7 +21,7 @@
             Originally built for my Computational Music Theory class final project, the following is a retrieval system using similar techniques 
             to TF-IDF in Information Retrieval to return closely related music pieces in a collection given a query file. The project relies on
             the <em>PrettyMIDI</em> library to dissect and compare information stored in the files.
-            <br>> <a href="files/MIDI_Music_Ranking_and_Retrieval.pdf"> See here for my paper submission for the Mathematics and Computation in Music Conference </a>
+            <br>> <a href="MIDI_Music_Ranking_and_Retrieval.pdf" download="download"> See here for my paper submission for the Mathematics and Computation in Music Conference </a>
             <br>> <a href="https://github.com/possumgod/CMT_Final"> See here for the github project </a>
         </p>
         <figure style="margin-top: 0; margin-bottom: 0;">
@@ -36,7 +43,7 @@
             The dataset was comprised of leasing and property information for a leasing company focused in the corporate leasing sector. Out of the various
             industries in the dataset, we decided to focus on determining trends in successful Coworking companies, creating a model for the properties they 
             leased that are factors of their success.
-            <br>> <a href="files/N5_The_Horrors_LLC.pdf" download>Paper download (draft)</a>
+            <br>> <a href="N5_The_Horrors_LLC.pdf" download="download">Paper download</a>
         </p>
 
         <h3 class="sidemenu">LinkedIn Network Visualization</h3>
@@ -72,7 +79,7 @@
             with low closeness centrality also had high clustering, which I think implies that while those books may not be bought with as wide of a variety, they are frequently 
             bought with a small group.
         </p>
-        <img src="images/politicalbooks.png" alt="please visit [] to read the text" class="center">
+        <img id="polbooks" src="images/politicalbooks.png" alt="" class="center">
 
         <h3>Text-based Adventure Game</h3>
         <p>
