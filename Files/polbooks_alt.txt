@@ -1,0 +1,76 @@
+# Book Purchases During 2004
+
+## US Presidential Election
+
+**Devlin Gallagher**
+
+### Abstract
+
+Through analysis of the *Books about US Politics* dataset based on a network of book purchases during the 2004 Presidential Election, purchasing patterns emerged within political categories. Left-leaning books formed smaller clusters, while right-leaning books had broader connections across political viewpoints. The findings suggest political influences on both the audience and a book network.
+
+### Data Set Details
+
+The *Books About US Politics* dataset looks at purchase overlap between books bought on Amazon leading up to the 2004 US Presidential Election.
+
+* **105 Nodes:** Book Titles
+* **441 Edges:** Books Co-purchased
+
+### Research Questions
+
+1. How does the political perspective of the books affect clustering and frequently bought groups?
+
+2. Do books with more ‘extreme’ values have lower centrality, while books with a center/objective perspective have a higher centrality?
+
+These questions aim to show how buyer behavior is affected by political viewpoints, which can offer insights into how people approach political education.
+
+---
+
+# Analysis & Results
+
+The main area of interest was determining the **effect** a book's political stance had on its connections to the network.
+
+Gephi was used to create a network visualization:
+
+* **Node Size:** clustering coefficient
+* **Node Color:** closeness centrality
+
+**Many nodes with low closeness centrality also had high clustering**, suggesting these books are purchased less broadly but more often within a specific set of buyers.
+
+Books were separated into one of the five categories: **left, center left, center, center right, and right.** These categories were based on key terms in the book descriptions. In the circular graph on the right, the previously described visualization is compared to coloring based on the original categorizations of political viewpoints (l/c/n).
+
+### Key Metrics
+
+Key metrics for specific categories based on Tableau and Gephi analysis:
+
+| Group              | Avg. Clustering | Avg. Degree |
+| ------------------ | --------------: | ----------: |
+| Overall            |           0.488 |         8.4 |
+| Left/Center left   |          0.5001 |        7.44 |
+| Right/Center right |          0.4075 |        9.46 |
+
+> *While the original dataset contained l/c/n categories based on viewpoint, categorizing further adds more analysis but may be affected by personal or source bias.*
+
+*Gephi visualization based on centrality and clustering compared to original dataset political categorizations*
+
+---
+
+# Conclusions
+
+Two main clusters emerge representative of each major political category:
+
+➢ **left-leaning books** formed smaller and tighter groups, perhaps representative of a cohesive audience
+
+➢ **right-leaning books** had more diverse co-purchases and broad connections, representative of information seeking
+
+Overall, it seems that readers of these **two main groups have different purchasing patterns and approaches to political readership.**
+
+---
+# References
+
+1. Krebs, V. (2004). *Books about US politics* [Data set]. Retrieved from **[http://www.orgnet.com](http://www.orgnet.com)**
+
+2. Krebs, V. (2004). *Divided we stand: Books about US politics* [Data set]. Retrieved from **[www.orgnet.com/divided3.html](http://www.orgnet.com/divided3.html)**
+
+---
+
+The poster also contains several chart titles/labels within the Tableau dashboard and Gephi visualization
