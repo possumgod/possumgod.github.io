@@ -154,7 +154,6 @@ figcaption {
     border: 1px solid var(--widget-bdr-color);
     position: relative;
     width: 80%;
-    max-width: 730px;
     height: auto;
     z-index: var(--img-z);
 }
@@ -280,6 +279,7 @@ footer {
     font-size: 12px;
     position: fixed;
     bottom: 10px;
+    left: 10px;
     width: 200px;
     align-items: center;
     padding-top: 5.75rem;
@@ -307,13 +307,24 @@ footer {
         padding-top: 10px;
     }
 
+    #network_graph {
+        height: max-content;
+        width: 100%;
+    }
+
     #network_legend {
         top: -20px;
-        right: -160px;
+        right: -250px;
     }
 
     .center {
         width: 100%;
+    }
+
+    footer {
+        z-index: 1;
+        position: static;
+        padding-top: 0;
     }
 }
 

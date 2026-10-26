@@ -43,7 +43,7 @@ document.writeln((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini
 
 document.writeln(' \
                 <div> \
-                    <a href="/DevlinGallagher_Resume.pdf" download="download">Resume</a> \
+                    <a href="/Files/DevlinGallagher_Resume.pdf" download="download">Resume</a> \
                 </div> \
                 <div> \
                     <a href="mailto:devlin@rgallagher.com" target="_blank">Email</a> \
@@ -94,7 +94,3 @@ document.addEventListener("DOMContentLoaded", function() {
     navContainer.innerHTML = html;
     document.body.insertBefore(navContainer, document.body.firstChild);
 });
-
-
-document.writeln(' \
-    <footer> &#xA9 2026 Devlin Gallagher </footer>')
